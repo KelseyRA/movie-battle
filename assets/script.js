@@ -12,7 +12,7 @@ function getApi(){
             return data;
        })
         .then(function (data) {
-            console.log(data)
+            // console.log(data)
         })
 
 }
