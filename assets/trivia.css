@@ -1,0 +1,19 @@
+
+.header{
+    height: auto;
+   
+}
+h1{
+    text-align: center;
+}
+.game{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.btn{
+    font-size: 24px;
+    padding: 8px;
+}
