@@ -1,9 +1,22 @@
 var game = $('.game');
 var board = $('.scoreBoard');
 var gameQuestions = $('.qtns');
-var progress = $('.progress');
+var progress = $('.progressBar');
 var players = $('.players');
+var answer = $('.answer')
+var buttonPlayer1 = $('.buttonPlayer1')
+var buttonPlayer2 = $('.buttonPlayer2')
+var buttons = [buttonPlayer1, buttonPlayer2]
+var seconds = 15
 
+var i = 0
+var progressBar = $('<progress>', {
+    class:"progress is-danger",
+    value:i,
+    max:"15",
+})
+progress.append(progressBar)
+var test = document.querySelector('progress');
 
 
 
@@ -20,7 +33,26 @@ function getTriviaApi(){
         success: function(result) {
             console.log(result);
             var questionValue = result[0].question;
-            gameQuestions.text(questionValue)
+            var answerValue = result[0].answer;
+
+            gameQuestions.text(questionValue);
+            
+            var timerInterval = setInterval(function() {
+               test.setAttribute('value', i++)
+                seconds--;
+                if(seconds === 0) {
+                    // Stops execution of action at set interval
+                    clearInterval(timerInterval);                   
+                    answer.text(answerValue);
+                }
+            }, 1000);
+
+
+
+
+
+
+
 
 
         },
@@ -33,15 +65,18 @@ function getTriviaApi(){
 
 
 
+
+
+
 getTriviaApi()
 
+buttons.forEach(function(button){
+    button.addEventListener('click', function(){
+        console.log('hello')
+    })
+})
 
-
-// var progressBar = $('.progress', {
-//     class:"progress is-danger",
-//     value:"1",
-//     max:"15",
-// })
 
 // var i = 0;
+
 

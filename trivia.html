@@ -1,97 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link the font awesome library -->
-    <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-    crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <!-- Link jquery library -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" 
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" 
-    crossorigin="anonymous"
-    ></script>  
-    <link rel="stylesheet" href="./assets/trivia.css">
-    <title>Trivia Game</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link the font awesome library -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- Link jquery library -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/trivia.css">
+  <title>Trivia Game</title>
 </head>
-<body>    
-    <div class="container is-fluid header">
-        <div class="notification is-primary header">
-            <h1 class="title is-1">Battle Movie</h1>
-            <h1 class="title is-2">Trivia Game</h1>
-            <nav class="breadcrumb is-right" aria-label="breadcrumbs">
-                <ul>
-                  <li>
-                    <a href="./index.html">
-                      <span class="icon is-small">
-                        <i class="fas fa-home" aria-hidden="true"></i>
-                      </span>
-                      <span>Home</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./search.html">
-                      <span class="icon is-small">
-                        <i class="fas fa-book" aria-hidden="true"></i>
-                      </span>
-                      <span>Movie Search</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="icon is-small">
-                        <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
-                      </span>
-                      <span>Rules</span>
-                    </a>
-                  </li>
-                  
-                </ul>
-            </nav>
-        </div>        
+
+<body>
+  <div class="container is-fluid header">
+    <div class="notification is-primary header">
+      <h1 class="title is-1">Battle Movie</h1>
+      <h1 class="title is-2">Trivia Game</h1>
+      <nav class="breadcrumb is-right" aria-label="breadcrumbs">
+        <ul>
+          <li>
+            <a href="./index.html">
+              <span class="icon is-small">
+                <i class="fas fa-home" aria-hidden="true"></i>
+              </span>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="./search.html">
+              <span class="icon is-small">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              <span>Movie Search</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon is-small">
+                <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+              </span>
+              <span>Rules</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
     </div>
-    <section class="game">
-        <div class="columns is-mobile">
-            <div class="column scoreBoard ">
-                
-            </div>              
+  </div>
+
+  
+  <section class="game">
+    <div class="columns is-10 is-mobile">
+      <div class="column gameQuestions ">
+        <div class="question">
+          <h4 class="qtns title is-4"></h4>
         </div>
-        <div class="columns is-10 is-mobile">
-            <div class="column gameQuestions ">
-                <div class="question">
-                    <h3 class="qtns title is-3"></h3>
-                </div>                
-                <div class="progressBar">
-                    <progress id="bar" class="progress is-danger"  max="15"></progress>
-
-                </div>
-            </div>              
+        <div class="progressBar">          
         </div>
-        <div class="columns is-mobile">       
-            <div class="column players">
-                <div class="buttons">
-                    <button class="button is-primary">Player 1 Score</button>
-                    <button class="button is-link">Player 2 Score</button>
-                </div>
-            </div>                
+      </div>
+     </div>
+  </section>  
+  
+
+  <section class="playerSection">
+    <div class="columns is-10 is-mobile">
+      <!-- <div class="columns is-mobile"> -->
+        <div class="column players">
+          <div class="buttons">
+            <button class="buttonPlayer1 is-primary">Player 1 Score</button>
+            <button class="buttonPlayer2 is-link">Player 2 Score</button>
+          </div>
         </div>
-    </section>
-    <footer>
-
-    </footer>
-
-    
+      </div>
+  </section>
 
 
 
+  <section>
+    <div class="columns is-mobile">
+      <div class="column scoreBoard ">
+        <h3 class="answer title is-3"></h3>            
+      </div>
+    </div>
+
+  </section>
+  
+  <footer>
+
+  </footer>
 
 
-    <script src="./assets/trivia.js"></script>
+
+
+
+
+
+  <script src="./assets/trivia.js"></script>
 </body>
+
 </html>

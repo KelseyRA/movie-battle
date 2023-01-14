@@ -7,13 +7,37 @@ h1{
     text-align: center;
 }
 .game{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top: 50px;
+    left: 50px;
+    margin-top: 40px;
+    
 }
+
+.question{
+    margin: 40px;
+}
+
+.progressBar{
+    width:  264px;
+}
+
+.playerSection{
+    position: relative;
+    top: 50px;
+    left: 50px;
+    margin-top: 20px;
+}
+
 .btn{
     font-size: 24px;
     padding: 8px;
 }
+
+.answer{
+    position: relative;
+    top: 50px;
+    left: 50px;
+    margin-top: 20px;
+}
+
