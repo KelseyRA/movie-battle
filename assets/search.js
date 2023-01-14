@@ -79,59 +79,6 @@ function getApi(movieInput){
 
             innerTile.appendChild(ratingEl);
 
-
-
-            // movieTitleEl.appendChild(ratingEl);
-            // innerTile.appendChild(releaseDateEl);
-
-
-
-
-            // First try - vertical results
-
-            // var cardImage = document.createElement("div");
-            // var figureEl = document.createElement("figure");
-            // var img = document.createElement("img");
-
-            // var card = document.createElement("div");
-            // var media = document.createElement("div");
-            // var mediaContent = document.createElement("div");
-            // var movieTitleEl = document.createElement("p");
-
-            // var lastDivEl = document.createElement("div");
-            // var ratingEl = document.createElement("p");
-            // var releaseDateEl = document.createElement("p");
-
-            // cardImage.setAttribute("class" , "card-image");
-            // figureEl.setAttribute("class" , "image is-100x100");
-            // img.setAttribute("class" , "poster");
-
-            // card.setAttribute("class" , "card-content");
-            // media.setAttribute("class" , "media");
-            // mediaContent.setAttribute("class", "media-content");
-            // movieTitleEl.setAttribute("class" , "title is-4");
-
-            // lastDivEl.setAttribute("class" , "content");
-            // ratingEl.setAttribute("class" , "rating");
-            // releaseDateEl.setAttribute("class" , "release-date");
-
-            // movieTitleEl.textContent = data.results[i].title;
-            // ratingEl.textContent = data.results[i].vote_average;
-            // releaseDate.textContent = data.results[i].release_date;
-
-            // img.src = "https://image.tmdb.org/t/p/original/" + posterImg;
-
-            // movieInfoCard.appendChild(figureEl);
-            // figureEl.appendChild(img);
-            // img.appendChild(card);
-            // card.appendChild(media);
-            // media.appendChild(mediaContent);
-            // mediaContent.appendChild(movieTitleEl);
-            // movieTitleEl.append(lastDivEl);
-            // lastDivEl.append(ratingEl);
-            // ratingEl.append(releaseDateEl);
-
-
             }
         })
 
@@ -139,4 +86,3 @@ function getApi(movieInput){
 
 submitBtn.addEventListener('click' , formSubmitHandler);
 
-// getApi();
