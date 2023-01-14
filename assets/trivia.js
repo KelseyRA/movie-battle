@@ -1,5 +1,12 @@
-var game = $('.game')
-console.log('hello')
+var game = $('.game');
+var board = $('.scoreBoard');
+var gameQuestions = $('.qtns');
+var progress = $('.progress');
+var players = $('.players');
+
+
+
+
 const triviaApi = 'fGnBcoftMFEO2Pl6TyhSpQ==0X42NWP7AgaIvW3U'
 
 function getTriviaApi(){
@@ -12,6 +19,10 @@ function getTriviaApi(){
         contentType: 'application/json',
         success: function(result) {
             console.log(result);
+            var questionValue = result[0].question;
+            gameQuestions.text(questionValue)
+
+
         },
         error: function ajaxError(jqXHR) {
             console.error('Error: ', jqXHR.responseText);
@@ -20,5 +31,17 @@ function getTriviaApi(){
     
 }
 
+
+
 getTriviaApi()
+
+
+
+// var progressBar = $('.progress', {
+//     class:"progress is-danger",
+//     value:"1",
+//     max:"15",
+// })
+
+// var i = 0;
 

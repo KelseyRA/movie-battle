@@ -1,6 +1,13 @@
+
 const apiKeyTMDB = '32ce25589aa56c85a8438a669253213c';
+
 var submitBtn = document.querySelector("#submit-btn");
 
+function getApi() {
+  var queryURL =
+    "https://api.themoviedb.org/3/search/movie?api_key=" +
+    apiKeyTMBD +
+    "&query=Jack Reacher";
 
 console.log(apiKeyTMDB);
 
@@ -140,3 +147,4 @@ function getApi(movieInput){
 submitBtn.addEventListener('click' , formSubmitHandler);
 
 // getApi();
+
