@@ -6,6 +6,9 @@
 h1{
     text-align: center;
 }
+main{
+    position:absolute;
+}
 .game{
     position: relative;
     top: 50px;
@@ -20,6 +23,9 @@ h1{
 
 .progressBar{
     width:  264px;
+}
+.clearBar{
+    display: none;
 }
 
 .playerSection{
