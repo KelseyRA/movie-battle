@@ -16,10 +16,19 @@ function getApi(movieInput) {
   var movieTitle = movieInput.value;
 
   var queryURL =
-    "https://api.themoviedb.org/3/search/movie?api_key=" +
-    apiKeyTMDB +
-    "&query=" +
-    movieTitle;
+    "https://api.themoviedb.org/3/search/movie?api_key=" + apiKeyTMDB +"&query=" + movieTitle + "&include_adult=false";
+
+  // var watchURL = "https://api.themoviedb.org/3/discover/movie?&with_watch_providersapi_key=" + apiKeyTMDB + "&query" + movieTitle;
+
+
+  // fetch(watchURL)
+  // .then(function (response) {
+  //   data = response.json();
+  //   return data;
+  // })
+  // .then(function (data) {
+  //   console.log(data);
+  // });
 
   fetch(queryURL)
     .then(function (response) {
@@ -37,13 +46,20 @@ function getApi(movieInput) {
         var title = data.results[i].title;
         var rating = data.results[i].vote_average;
         var releaseDate = data.results[i].release_date;
+        var summary = data.results[i].overview;
+        var adult = data.results[i].adult;
+        var numberOfVotes = data.results[i].vote_count;
 
         console.log(posterImg);
         console.log(title);
         console.log(rating);
         console.log(releaseDate);
+        console.log(summary);
+        console.log(adult);
+        console.log(numberOfVotes);
 
-        // second option with tiles
+
+        // Render movie tiles
 
         var outerTile = document.createElement("div");
         var innerTile = document.createElement("article");
@@ -52,32 +68,52 @@ function getApi(movieInput) {
         var movieTitleEl = document.createElement("p");
         var ratingEl = document.createElement("p");
         var releaseDateEl = document.createElement("p");
+        var summaryEl = document.createElement("p");
+        var numberOfVotesEl =document.createElement("p");
 
         outerTile.setAttribute("class", "tile is-parent is-4");
         innerTile.setAttribute("class", "tile is-child box");
         figureEl.setAttribute("class", "image is-4by3");
         img.setAttribute("class", "poster");
-        movieTitleEl.setAttribute("class", "title");
+        movieTitleEl.setAttribute("class", "title mt-4");
         ratingEl.setAttribute("class", "subtitle rating");
-        releaseDateEl.setAttribute("class", "subtitle release");
+        releaseDateEl.setAttribute("class", "subtitle release mt-4");
+        summaryEl.setAttribute("class" , "subtitle summary");
+        numberOfVotesEl.setAttribute("class" , "subtitle summary mt-4");
 
-        movieTitleEl.textContent = data.results[i].title;
-        ratingEl.textContent = "Rating: " + data.results[i].vote_average;
-        releaseDateEl.textContent =
-          "Release Date: " + data.results[i].release_date;
-
-        img.src = "https://image.tmdb.org/t/p/original/" + posterImg;
+        movieTitleEl.textContent = title;
+        ratingEl.textContent = "Rating: " + rating + "/10";
+        numberOfVotesEl.textContent = "Number of Ratings: " + numberOfVotes;
 
         movieInfoCard.appendChild(outerTile);
         outerTile.appendChild(innerTile);
         innerTile.appendChild(figureEl);
         figureEl.appendChild(img);
         innerTile.appendChild(movieTitleEl);
+        innerTile.append(releaseDateEl);
+        innerTile.append(ratingEl);
+        innerTile.append(numberOfVotesEl);
+        innerTile.append(summaryEl);
+        
 
-        ratingEl.append(releaseDateEl);
-
-        innerTile.appendChild(ratingEl);
+        if (releaseDate === undefined) {
+          releaseDateEl.textContent = "Release year unavailable"
+        } else {
+          releaseDateEl.textContent = "Release Year: " + (releaseDate.slice(0, 4));
       }
+
+        if (posterImg === null) {
+          img.src = "./assets/icons8-unavailable-150.png";
+        }else {
+        img.src = "https://image.tmdb.org/t/p/original/" + posterImg;
+      }
+
+      if (summary === "") {
+      summaryEl.textContent = "Synopsis unavailable."
+    } else {
+      summaryEl.textContent = "Synopsis: " + summary;
+    }
+  }
     });
 }
 
