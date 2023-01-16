@@ -1,32 +1,45 @@
 
-.header{
-    height: auto;
-   
+main{
+  /* margin: 25%; */
+    background-image: url(./Pictures/igor-karimov-9AmKnNZw3GA-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 220px;
+    padding-bottom: 120px;
+
 }
+
 h1{
     text-align: center;
+    
 }
-.game{
-    position: relative;
-    top: 50px;
-    left: 50px;
-    margin-top: 40px;
+h3{
+    color
+}
+
+
+.game{    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 120px;
     
 }
 
 .question{
-    margin: 40px;
+    margin-bottom: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .progressBar{
-    width:  264px;
+    width:  300px;
+}
+.clearBar{
+    display: none;
 }
 
-.playerSection{
-    position: relative;
-    top: 50px;
-    left: 50px;
-    margin-top: 20px;
+.playerSection{  
+    margin-top: 60px;
 }
 
 .btn{
@@ -34,10 +47,10 @@ h1{
     padding: 8px;
 }
 
-.answer{
-    position: relative;
-    top: 50px;
-    left: 50px;
-    margin-top: 20px;
+
+
+.answer{    
+    margin-top: 60px;
+
 }
 
