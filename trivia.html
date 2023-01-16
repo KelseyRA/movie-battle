@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <div class="container is-fluid header">
+  <div class="container header">
     <div class="notification is-primary header">
       <h1 class="title is-1">Battle Movie</h1>
       <h1 class="title is-2">Trivia Game</h1>
@@ -53,8 +53,8 @@
     </div>
   </div>
 
-  <main>
-    <section class="game">
+  <main class="container">
+    <section class="container game is-flex is-justify-content-center">
       <div class="columns is-10 is-mobile">
         <div class="column gameQuestions ">
           <div class="question">
@@ -66,15 +66,15 @@
       </div>
     </section>
 
-    <section>
-      <div class="columns is-mobile  ">
+    <section class="container ans is-flex is-justify-content-center">
+      <div class="columns is-mobile">
         <div class="column ">
-          <h3 class="answer title is-3"></h3>
+          <h3 class="answer title is-3 "></h3>
         </div>
       </div>
     </section>
 
-    <section class="playerSection">
+    <section class="container playerSection is-flex is-justify-content-center">
       <div class="columns is-10 is-mobile">
         <div class="column players">
           <div class="buttons">
@@ -86,7 +86,7 @@
       </div>
     </section>
 
-    <section class="scoreBoard">
+    <section class="container scoreBoard is-flex is-justify-content-center">
       <div class="columns is-mobile">
         <div class="column">
           <h3 class="score title is-3"></h3>
@@ -100,8 +100,7 @@
             <h3 class="tie title is-3"></h3>          
           </div>
         </div>
-      </div>        
-      
+      </div>
     </section>
 
   </main>

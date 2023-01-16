@@ -25,7 +25,7 @@ var player2Score = localStorage.getItem('player2')
 var tieScore = localStorage.getItem('tie')
 
 
-function getTriviaApi() {
+function getTriviaApi() {    
     var game = $('.game');
     var board = $('.scoreBoard');    
     var seconds = 4
@@ -51,6 +51,7 @@ function getTriviaApi() {
                     // Stops execution of action at set interval
                     clearInterval(timerInterval);
                     answer.text(answerValue);
+                    
                 }
             }, 1000);
         },
@@ -65,7 +66,7 @@ buttonPlayer1.on('click', function () {
     i = 0        
     barProgress.setAttribute('value', 0)  
     answer.text("")
-    
+        
     if (endgame === 10){
         answer.text("")
         barProgress.setAttribute('class','clearBar')
