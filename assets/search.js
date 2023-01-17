@@ -104,6 +104,7 @@ function getApi(movieInput) {
 
         if (posterImg === null) {
           img.src = "./assets/icons8-unavailable-150.png";
+          outerTile.style.display = "none";
         }else {
         img.src = "https://image.tmdb.org/t/p/original/" + posterImg;
       }

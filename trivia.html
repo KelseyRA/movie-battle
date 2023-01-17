@@ -13,11 +13,11 @@
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/trivia.css">
-  <title>Trivia Game</title>
+  <title>Movie-Battle-Trivia-Game</title>
 </head>
 
 <body>
-  <div class="container header">
+  <div class="hero is-primary is-medium header">
     <div class="notification is-primary header">
       <h1 class="title is-1">Battle Movie</h1>
       <h1 class="title is-2">Trivia Game</h1>
@@ -53,12 +53,12 @@
     </div>
   </div>
 
-  <main class="container">
+  <main class="container is-fluid">
     <section class="container game is-flex is-justify-content-center">
       <div class="columns is-10 is-mobile">
         <div class="column gameQuestions ">
           <div class="question">
-            <h4 class="qtns title is-4"></h4>
+            <h4 class="qtns title is-4 has-text-white"></h4>
           </div>
           <div class="progressBar">
           </div>
@@ -69,7 +69,7 @@
     <section class="container ans is-flex is-justify-content-center">
       <div class="columns is-mobile">
         <div class="column ">
-          <h3 class="answer title is-3 "></h3>
+          <h3 class="answer title is-3 has-text-white"></h3>
         </div>
       </div>
     </section>
@@ -78,9 +78,9 @@
       <div class="columns is-10 is-mobile">
         <div class="column players">
           <div class="buttons">
-            <button class="buttonPlayer1 is-primary">Player 1</button>
-            <button class="buttonPlayer2 is-link">Player 2</button>
-            <button class="nextQuestion is-link">Next Question</button>
+            <button class="buttonPlayer1 button is-primary">Player 1</button>
+            <button class="buttonPlayer2 button is-primary">Player 2</button>
+            <button class="nextQuestion button is-primary">Next Question</button>
           </div>
         </div>
       </div>
@@ -89,15 +89,15 @@
     <section class="container scoreBoard is-flex is-justify-content-center">
       <div class="columns is-mobile">
         <div class="column">
-          <h3 class="score title is-3"></h3>
+          <h3 class="score title is-3 has-text-white"></h3>
         </div>
       </div>
       <div class="columns is-mobile">
         <div class="column">
           <div>
-            <h3 class="player1 title is-3"></h3>
-            <h3 class="player2 title is-3"></h3>
-            <h3 class="tie title is-3"></h3>          
+            <h3 class="player1 title is-3 has-text-white"></h3>
+            <h3 class="player2 title is-3 has-text-white"></h3>
+            <h3 class="tie title is-3 has-text-white"></h3>          
           </div>
         </div>
       </div>
