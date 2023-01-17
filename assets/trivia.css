@@ -1,21 +1,19 @@
 
 main{
   /* margin: 25%; */
-    background-image: url(./Pictures/igor-karimov-9AmKnNZw3GA-unsplash.jpg);
+    /* background-image: url(./Pictures/igor-karimov-9AmKnNZw3GA-unsplash.jpg); */
     background-size: cover;
     background-position: center;
-    padding-top: 220px;
-    padding-bottom: 120px;
-
+    padding-top: 32px;
+    padding-bottom: 628px;
+    background: linear-gradient(to right, blueviolet,rgb(196, 146, 242));
 }
 
 h1{
     text-align: center;
     
 }
-h3{
-    color
-}
+
 
 
 .game{    
