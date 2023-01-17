@@ -15,33 +15,43 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
-<body>
-
-    <div class="columns is-centered mt-6 level">
-        <div class="column is-half instructions">
-            <article class="tile is-child notification is-primary ">
-                <p class="title is-centered justify-content: center">Movie Battle</p>
-                <p class="subtitle">Battle your partner for a chance to select the movie of you choice.</p>
-            </article>
-            <div class="tile box">
-                <p class="title m-6">How To Play</p>
-                <ol class="subtitle m-6">
-                    <li>This is a two player game.</li>
-                    <li>Each player will alternate answering a question.</li>
-                    <li>If the you get a question correct you will receive one point.</li>
-                    <li>The player with the highest score gets to pick the movie of their choice.</li>
-                    <li>You have 1 minute to answer the questions</li>
-                    <li>Click the start button to begin.</li>
-                    <a href="./trivia.html">
-                        <button class="button mt-6 ml-6 is-info">Start</button>
-                    </a>
-                </ol>
-
+<body style="background: linear-gradient(to right, blueviolet, rgb(196, 146, 242));">
+    <section class="hero is-medium is-primary is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">
+                    Movie Battle
+                </h1>
+                <h2 class="subtitle">
+                    Battle your partner for a chance to select the movie of your choice!
+                </h2>
             </div>
         </div>
-
-
-        <script src="./assets/script.js"></script>
+    </section>
+    <div class="container mt-6">
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <div class="card">
+                    <div class="card-content">
+                        <p class="title m-6">How To Play</p>
+                        <ol class="subtitle m-6">
+                          <li>Grab a partner.</li>
+                          <li>You will each alternate answering a question.</li>
+                          <li>You will have 15 seconds to answer each questions.</li>
+                          <li>If time runs out no one gets a point.</li>
+                          <li>Whoever has the most points after 10 questions gets to choose which movie to watch!</li>
+                          <li>Click the start button to begin.</li>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="./trivia.html" class="card-footer-item">
+                            <button class="button is-primary">Start</button>
+                        </a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>
