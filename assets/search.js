@@ -1,6 +1,10 @@
+// API Key and submit button variable
+
 const apiKeyTMDB = "32ce25589aa56c85a8438a669253213c";
 
 var submitBtn = document.querySelector("#submit-btn");
+
+// Calls getApi function when a word is searched
 
 function formSubmitHandler(event) {
   event.preventDefault();
@@ -12,22 +16,14 @@ function formSubmitHandler(event) {
   }
 }
 
+// Fetches the Api information and renders on the search page
+
 function getApi(movieInput) {
   var movieTitle = movieInput.value;
 
   var queryURL =
     "https://api.themoviedb.org/3/search/movie?api_key=" + apiKeyTMDB +"&query=" + movieTitle + "&include_adult=false";
 
-  var watchURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + apiKeyTMDB + "&query" + movieTitle + "&with_watch_providers";
-
-  fetch(watchURL)
-  .then(function (response) {
-    data = response.json();
-    return data;
-  })
-  .then(function (data) {
-    console.log(data);
-  });
 
   fetch(queryURL)
     .then(function (response) {
@@ -46,19 +42,10 @@ function getApi(movieInput) {
         var rating = data.results[i].vote_average;
         var releaseDate = data.results[i].release_date;
         var summary = data.results[i].overview;
-        var adult = data.results[i].adult;
         var numberOfVotes = data.results[i].vote_count;
 
-        console.log(posterImg);
-        console.log(title);
-        console.log(rating);
-        console.log(releaseDate);
-        console.log(summary);
-        console.log(adult);
-        console.log(numberOfVotes);
 
-
-        // Render movie tiles
+        // Renders data onto movie tiles
 
         var outerTile = document.createElement("div");
         var innerTile = document.createElement("article");
@@ -94,27 +81,28 @@ function getApi(movieInput) {
         innerTile.append(numberOfVotesEl);
         innerTile.append(summaryEl);
         
+        // replaces data or excludes movie records when missing data found
 
         if (releaseDate === undefined) {
           releaseDateEl.textContent = "Release year unavailable"
         } else {
           releaseDateEl.textContent = "Release Year: " + (releaseDate.slice(0, 4));
       }
-
         if (posterImg === null) {
-          img.src = "./assets/icons8-unavailable-150.png";
           outerTile.style.display = "none";
         }else {
         img.src = "https://image.tmdb.org/t/p/original/" + posterImg;
       }
 
-      if (summary === "") {
-      summaryEl.textContent = "Synopsis unavailable."
-    } else {
-      summaryEl.textContent = "Synopsis: " + summary;
+        if (summary === "") {
+        summaryEl.textContent = "Synopsis unavailable."
+      } else {
+        summaryEl.textContent = "Synopsis: " + summary;
     }
   }
     });
 }
+
+// Calls first function when the submit button is clicked
 
 submitBtn.addEventListener("click", formSubmitHandler);

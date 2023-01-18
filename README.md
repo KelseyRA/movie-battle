@@ -6,7 +6,7 @@ Movie Battle is a fun app that lets two people play a trivia game to decide what
 
 ## Screenshot
 
-![computer](assets/README-Pic.png)
+![computer](./assets/Pictures/README-Pic.png)
 
 ## Live link
 
