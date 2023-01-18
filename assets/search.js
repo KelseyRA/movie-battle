@@ -18,17 +18,16 @@ function getApi(movieInput) {
   var queryURL =
     "https://api.themoviedb.org/3/search/movie?api_key=" + apiKeyTMDB +"&query=" + movieTitle + "&include_adult=false";
 
-  // var watchURL = "https://api.themoviedb.org/3/discover/movie?&with_watch_providersapi_key=" + apiKeyTMDB + "&query" + movieTitle;
+  var watchURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + apiKeyTMDB + "&query" + movieTitle + "&with_watch_providers";
 
-
-  // fetch(watchURL)
-  // .then(function (response) {
-  //   data = response.json();
-  //   return data;
-  // })
-  // .then(function (data) {
-  //   console.log(data);
-  // });
+  fetch(watchURL)
+  .then(function (response) {
+    data = response.json();
+    return data;
+  })
+  .then(function (data) {
+    console.log(data);
+  });
 
   fetch(queryURL)
     .then(function (response) {
