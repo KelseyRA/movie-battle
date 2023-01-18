@@ -16,12 +16,9 @@ h1{
 
 
 
-.game{    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 120px;
-    
+.game{
+    margin-top: 120px; 
+    height: 120px; ;   
 }
 
 .question{
@@ -32,6 +29,9 @@ h1{
 .progressBar{
     width:  300px;
 }
+/* .progressSection{
+    margin-top: 60px;
+} */
 .clearBar{
     display: none;
 }
@@ -43,12 +43,19 @@ h1{
 .btn{
     font-size: 24px;
     padding: 8px;
+    
 }
 
 
 
 .answer{    
     margin-top: 60px;
+    height: 40px;
 
 }
+
+/* .info{
+    border: solid;
+    border-radius: 30px;
+} */
 

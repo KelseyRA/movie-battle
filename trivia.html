@@ -40,11 +40,11 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a class="scoreBoardBtn">              
               <span class="icon is-small">
                 <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
               </span>
-              <span>Rules</span>
+              <span>Scoreboard</span>              
             </a>
           </li>
 
@@ -54,12 +54,20 @@
   </div>
 
   <main class="container is-fluid">
+    
     <section class="container game is-flex is-justify-content-center">
       <div class="columns is-10 is-mobile">
-        <div class="column gameQuestions ">
-          <div class="question">
+        <div class="column gameQuestions">
+          <div class="question is-flex">
             <h4 class="qtns title is-4 has-text-white"></h4>
-          </div>
+          </div>          
+        </div>
+      </div>      
+    </section>
+
+    <section class="container progressSection is-flex is-justify-content-center">
+      <div class="columns is-10 is-mobile">
+        <div class="column gameQuestions">          
           <div class="progressBar">
           </div>
         </div>
@@ -86,15 +94,19 @@
       </div>
     </section>
 
-    <section class="container scoreBoard is-flex is-justify-content-center">
+    <section class="container result is-flex is-justify-content-center">
       <div class="columns is-mobile">
         <div class="column">
           <h3 class="score title is-3 has-text-white"></h3>
         </div>
       </div>
-      <div class="columns is-mobile">
+    </section>
+
+    <Section id="scoreBoard" class="container is-mobile is-flex is-justify-content-center">  
+      <div class="columns info ">
         <div class="column">
           <div>
+            <h2 class="board title is-2 has-text-white"></h2>
             <h3 class="player1 title is-3 has-text-white"></h3>
             <h3 class="player2 title is-3 has-text-white"></h3>
             <h3 class="tie title is-3 has-text-white"></h3>
