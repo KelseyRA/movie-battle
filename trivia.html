@@ -17,11 +17,11 @@
 </head>
 
 <body>
-  <div class="hero is-primary is-medium header">
+  <div class="hero is-primary is-medium header is-mobile">
     <div class="notification is-primary header">
       <h1 class="title is-1">Battle Movie</h1>
       <h1 class="title is-2">Trivia Game</h1>
-      <nav class="breadcrumb is-right" aria-label="breadcrumbs">
+      <nav class="breadcrumb is-right navBar" aria-label="breadcrumbs">
         <ul>
           <li>
             <a href="./index.html">
@@ -53,9 +53,9 @@
     </div>
   </div>
 
-  <main class="container is-fluid">
+  <main class="container is-fluid main">
     
-    <section class="container game is-flex is-justify-content-center">
+    <section class="container game is-flex is-justify-content-center ">
       <div class="columns is-10 is-mobile">
         <div class="column gameQuestions">
           <div class="question is-flex">
@@ -105,31 +105,29 @@
     <Section id="scoreBoard" class="container is-mobile is-flex is-justify-content-center">  
       <div class="columns info ">
         <div class="column">
-          <div>
+          <div class="scorePoints">
             <h2 class="board title is-2 has-text-white"></h2>
             <h3 class="player1 title is-3 has-text-white"></h3>
             <h3 class="player2 title is-3 has-text-white"></h3>
             <h3 class="tie title is-3 has-text-white"></h3>
           </div>
+          <div>
+            <button class="playAgain clearBar"></button>
+            <a href="./search.html">
+              <button class="movieSearch clearBar"></button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
-
   </main>
-
-
-
-
-  <footer>
-
+  <footer class="footer has-background-white mt-6">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Movie data gathered by </strong> <a href="https://api-ninjas.com/">API Ninjas</a>
+        </p>
+    </div>
   </footer>
-
-
-
-
-
-
-
   <script src="./assets/trivia.js"></script>
 </body>
 
