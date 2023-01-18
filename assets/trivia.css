@@ -5,7 +5,7 @@ main{
     background-size: cover;
     background-position: center;
     padding-top: 32px;
-    padding-bottom: 628px;
+    padding-bottom: 382px;
     background: linear-gradient(to right, blueviolet,rgb(196, 146, 242));
 }
 
@@ -58,4 +58,36 @@ h1{
     border: solid;
     border-radius: 30px;
 } */
+
+.scorePoints {
+    position:relative ;
+    bottom: 50px;
+}
+
+.board {
+    position:relative ;
+    bottom: 50px;
+}
+
+@media screen and  (max-width: 576px){
+    main {
+        padding-bottom: 300px;
+    }
+    .navBar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .game{
+        margin-top: 20px;
+    }
+    .playerSection{
+        margin-top: 20px;
+    }
+    .ans{
+        display: flex;
+        align-items: center;
+    }
+    
+}
 
