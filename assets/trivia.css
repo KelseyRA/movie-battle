@@ -1,103 +1,111 @@
+/* Set font to the body */
 body {
     font-family: 'Poppins', sans-serif;
 }
-main{
-  /* margin: 25%; */
-    /* background-image: url(./Pictures/igor-karimov-9AmKnNZw3GA-unsplash.jpg); */
-    background-size: cover;
-    background-position: center;
+
+main {
+    /* Set padding and color to the background */
     padding-top: 32px;
     padding-bottom: 382px;
-    background: linear-gradient(to right, blueviolet,rgb(196, 146, 242));
+    background: linear-gradient(to right, blueviolet, rgb(196, 146, 242));
 }
 
-h1{
+h1 {
+    /* Align header text to center */
     text-align: center;
-    
+
 }
 
-.game{
-    margin-top: 120px; 
-    height: 120px; ;   
+.game {
+    /* provides margin to the questions section */
+    margin-top: 120px;
+    height: 120px;
+    ;
 }
 
-.question{
+.question {
+    /* Set margon bottom to the question */
     margin-bottom: 40px;
-    
+
 }
 
-.progressBar{
-    width:  300px;
+.progressBar {
+    /* set the width of the progress bar */
+    width: 300px;
 }
-/* .progressSection{
-    margin-top: 60px;
-} */
-.clearBar{
+
+.clear {
+    /* to clear element from the screen */
     display: none;
 }
 
-.playerSection{  
+.playerSection {
+    /* set margin top to the buttons */
     margin-top: 60px;
 }
 
-.btn{
+.btn {
+    /* set font and padding to the buttons */
     font-size: 24px;
     padding: 8px;
-    
+
 }
 
 
 
-.answer{    
+.answer {
+    /* set margin and height to the answer */
     margin-top: 60px;
     height: 40px;
 
 }
 
-/* .info{
-    border: solid;
-    border-radius: 30px;
-} */
 
 .scorePoints {
-    position:relative ;
+    /* set position to the result */
+    position: relative;
     bottom: 50px;
 }
 
 .board {
-    position:relative ;
+    position: relative;
     bottom: 50px;
 }
 
-.score{
+.score {
     position: relative;
     bottom: 165px;
-    
+
 }
 
-@media screen and  (max-width: 576px){
+@media screen and (max-width: 576px) {
+    /* apply the followings setting when the screen is 576 px or less */
     main {
         padding-bottom: 300px;
     }
-    .navBar{
+
+    .navBar {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .game{
+
+    .game {
         margin-top: 20px;
         height: auto;
     }
-    .playerSection{
+
+    .playerSection {
         margin-top: 20px;
     }
-    .ans{
+
+    .ans {
         display: flex;
         align-items: center;
     }
-    .answer{
+
+    .answer {
         margin-top: 24px;
         height: 60px;
     }
 }
-
