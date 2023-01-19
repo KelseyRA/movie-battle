@@ -7,11 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie-Battle-Search</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
-    <!-- Link jquery library -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/search.css">
 </head>
 
@@ -55,7 +53,8 @@
                 </p>
                 <p class="subtitle">
                     <input id="movie-title" type="text" placeholder="Search" />
-                    <button id="submit-btn" placeholder="Submit">Submit</button>
+                    <button class="js-modal-trigger" data-target="modal-js-example" id="submit-btn"
+                        placeholder="Submit">Submit</button>
                 </p>
             </div>
         </div>
@@ -69,12 +68,25 @@
 
     <!-- Footer with API acknowledgements -->
     <footer class="footer has-background-white mt-6">
-        <div class="content has-text-centered">
+        <div class="content has-text-centered has-text-dark">
             <p>
                 <strong>Movie data gathered by </strong> <a href="https://www.themoviedb.org/">TMDb</a>
             </p>
         </div>
     </footer>
+
+    <div id="modal-js-example" class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-content">
+            <div class="box">
+                <p class="has-text-centered">No movies were found with this title. Please try again.</p>
+            </div>
+        </div>
+
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <script src="./assets/modal.js"></script>
     <script src="./assets/search.js"></script>
 </body>
 
