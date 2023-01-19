@@ -3,9 +3,9 @@ body {
     font-family: 'Poppins', sans-serif;
     color: grey;
 }
-/* Provides background styling when nothing has been searched */
+/* Provides background color to the movies cards */
 main {
-    background: linear-gradient(to right, blueviolet,rgb(196, 146, 242));
+  background: linear-gradient(to right, blueviolet,rgb(196, 146, 242));
 }
 /* Made search bar bigger */
 #movie-title {
@@ -30,4 +30,12 @@ input::-webkit-input-placeholder {
 .hero.is-primary .title {
   color: #fff;
   font-size: 50px;
+}
+
+@media screen and  (max-width: 769px){
+  
+  #movie-title {
+    width: 280px;
+    
+  }
 }

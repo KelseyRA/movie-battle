@@ -8,28 +8,32 @@
   <!-- Link the font awesome library -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-
+  <!-- Link the Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-  
+  <!--Link Bulma CSS framework -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
   <!-- Link jquery library -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
+    </script>
+  <!-- Link CSS file -->
   <link rel="stylesheet" href="./assets/trivia.css">
   <title>Movie-Battle-Trivia-Game</title>
 </head>
 
 <body>
+  <!-- Heather for the Trivia Game -->
   <div class="hero is-primary is-medium header is-mobile">
     <div class="notification is-primary header">
       <h1 class="title is-1">Movie Battle</h1>
       <h1 class="title is-2">Trivia Game</h1>
+      <!-- Navigation Bar -->
       <nav class="breadcrumb is-right navBar" aria-label="breadcrumbs">
         <ul>
           <li>
+            <!-- Link to the home page -->
             <a href="./index.html">
               <span class="icon is-small">
                 <i class="fas fa-home" aria-hidden="true"></i>
@@ -38,6 +42,7 @@
             </a>
           </li>
           <li>
+            <!-- Link to the Search Page -->
             <a href="./search.html">
               <span class="icon is-small">
                 <i class="fas fa-book" aria-hidden="true"></i>
@@ -46,39 +51,43 @@
             </a>
           </li>
           <li>
-            <a class="scoreBoardBtn">              
+            <!-- Link to show the Scoreboard -->
+            <a class="scoreBoardBtn">
               <span class="icon is-small">
                 <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
               </span>
-              <span>Scoreboard</span>              
+              <span>Scoreboard</span>
             </a>
           </li>
-
         </ul>
       </nav>
     </div>
   </div>
 
+
   <main class="container is-fluid main">
-  <section class="container game is-flex is-justify-content-center ">
+    <!-- Questions part of the game -->
+    <section class="container game is-flex is-justify-content-center ">
       <div class="columns is-10 is-mobile">
-        <div class="column gameQuestions">
+        <div class="column triviaQuestions">
           <div class="question is-flex">
             <h4 class="qtns title is-4 has-text-white"></h4>
-          </div>          
+          </div>
         </div>
-      </div>      
+      </div>
     </section>
 
+    <!-- Progress bar to indicates the timer -->
     <section class="container progressSection is-flex is-justify-content-center">
       <div class="columns is-10 is-mobile">
-        <div class="column gameQuestions">          
+        <div class="column gameQuestions">
           <div class="progressBar">
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Area where the answer is presented -->
     <section class="container ans is-flex is-justify-content-center">
       <div class="columns is-mobile">
         <div class="column ">
@@ -87,6 +96,7 @@
       </div>
     </section>
 
+    <!-- Buttons to interact with the game -->
     <section class="container playerSection is-flex is-justify-content-center">
       <div class="columns is-10 is-mobile">
         <div class="column players">
@@ -99,6 +109,7 @@
       </div>
     </section>
 
+    <!-- Game results  -->
     <section class="container result is-flex is-justify-content-center">
       <div class="columns is-mobile">
         <div class="column">
@@ -107,7 +118,8 @@
       </div>
     </section>
 
-    <Section id="scoreBoard" class="container is-mobile is-flex is-justify-content-center">  
+    <!-- Scoreboar area where wins, loses, and ties will be presented -->
+    <Section id="scoreBoard" class="container is-mobile is-flex is-justify-content-center">
       <div class="columns info ">
         <div class="column">
           <div class="scorePoints">
@@ -116,21 +128,24 @@
             <h3 class="player2 title is-3 has-text-white"></h3>
             <h3 class="tie title is-3 has-text-white"></h3>
           </div>
+          <!-- Buttons to play again or go to movie search -->
           <div>
-            <button class="playAgain clearBar button is-primary"></button>
+            <button class="playAgain clear button is-primary"></button>
             <a href="./search.html">
-              <button class="movieSearch clearBar button is-primary"></button>
+              <button class="movieSearch clear button is-primary"></button>
             </a>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Footer with API acknowledgements -->
   <footer class="footer has-background-white mt-6">
     <div class="content has-text-centered">
-        <p>
-            <strong>Movie data gathered by </strong> <a href="https://api-ninjas.com/">API Ninjas</a>
-        </p>
+      <p>
+        <strong>Movie data gathered by </strong> <a href="https://api-ninjas.com/">API Ninjas</a>
+      </p>
     </div>
   </footer>
   <script src="./assets/trivia.js"></script>
