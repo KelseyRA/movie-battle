@@ -1,8 +1,11 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: grey;
+}
 /* Provides background styling when nothing has been searched */
 main {
-  background: linear-gradient(to right, blueviolet, rgb(196, 146, 242));
-  height: 20rem;
-}
+    background: linear-gradient(to right, blueviolet,rgb(196, 146, 242));
 
 /* Made search bar bigger */
 #movie-title {
@@ -20,6 +23,7 @@ input,
 input::-webkit-input-placeholder {
   font-size: 25px;
   line-height: 4;
+
 }
 
 /* Movie Battle font size */
