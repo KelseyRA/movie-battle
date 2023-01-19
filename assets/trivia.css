@@ -1,4 +1,6 @@
-
+body {
+    font-family: 'Poppins', sans-serif;
+}
 main{
   /* margin: 25%; */
     /* background-image: url(./Pictures/igor-karimov-9AmKnNZw3GA-unsplash.jpg); */
@@ -14,8 +16,6 @@ h1{
     
 }
 
-
-
 .game{
     margin-top: 120px; 
     height: 120px; ;   
@@ -23,7 +23,7 @@ h1{
 
 .question{
     margin-bottom: 40px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
 
 .progressBar{
@@ -69,6 +69,12 @@ h1{
     bottom: 50px;
 }
 
+.score{
+    position: relative;
+    bottom: 165px;
+    
+}
+
 @media screen and  (max-width: 576px){
     main {
         padding-bottom: 300px;
@@ -80,6 +86,7 @@ h1{
     }
     .game{
         margin-top: 20px;
+        height: auto;
     }
     .playerSection{
         margin-top: 20px;
@@ -88,6 +95,9 @@ h1{
         display: flex;
         align-items: center;
     }
-    
+    .answer{
+        margin-top: 24px;
+        height: 60px;
+    }
 }
 

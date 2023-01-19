@@ -6,8 +6,9 @@ var i = 0;
 var progressBar = $('<progress>', {
     class: "progress is-danger",
     value: i,
-    max: "1",
+    max: "13",
 });
+
 var progress = $('.progressBar');
 progress.append(progressBar)
 var barProgress = document.querySelector('progress');
@@ -35,7 +36,7 @@ var movieSearchBtn = $('.movieSearch');
 
 
 function getTriviaApi() {
-    var seconds = 2
+    var seconds = 15
     const triviaApi = 'fGnBcoftMFEO2Pl6TyhSpQ==0X42NWP7AgaIvW3U'
 
 
@@ -147,7 +148,7 @@ function scoreBoard(){
 
    var scoreBoardBorder = $('.info')
    scoreBoardBorder.css('border-radius', '30px')
-    board.text('ScoreBoard')
+    board.text('Scoreboard')
     if (player1Score === null || player1Score === null || tieScore === null){
         var player1InitialScore = 0;
         var player2InitialScore = 0;
