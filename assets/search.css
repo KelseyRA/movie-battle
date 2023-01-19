@@ -6,7 +6,7 @@ body {
 /* Provides background styling when nothing has been searched */
 main {
     background: linear-gradient(to right, blueviolet,rgb(196, 146, 242));
-
+}
 /* Made search bar bigger */
 #movie-title {
   width: 500px;
