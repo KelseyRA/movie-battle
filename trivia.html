@@ -8,7 +8,13 @@
   <!-- Link the font awesome library -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
   <!-- Link jquery library -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
@@ -19,7 +25,7 @@
 <body>
   <div class="hero is-primary is-medium header is-mobile">
     <div class="notification is-primary header">
-      <h1 class="title is-1">Battle Movie</h1>
+      <h1 class="title is-1">Movie Battle</h1>
       <h1 class="title is-2">Trivia Game</h1>
       <nav class="breadcrumb is-right navBar" aria-label="breadcrumbs">
         <ul>
@@ -54,8 +60,7 @@
   </div>
 
   <main class="container is-fluid main">
-    
-    <section class="container game is-flex is-justify-content-center ">
+  <section class="container game is-flex is-justify-content-center ">
       <div class="columns is-10 is-mobile">
         <div class="column gameQuestions">
           <div class="question is-flex">
@@ -97,7 +102,7 @@
     <section class="container result is-flex is-justify-content-center">
       <div class="columns is-mobile">
         <div class="column">
-          <h3 class="score title is-3 has-text-white"></h3>
+          <h4 class="score title is-4 has-text-white"></h4>
         </div>
       </div>
     </section>
@@ -112,9 +117,9 @@
             <h3 class="tie title is-3 has-text-white"></h3>
           </div>
           <div>
-            <button class="playAgain clearBar"></button>
+            <button class="playAgain clearBar button is-primary"></button>
             <a href="./search.html">
-              <button class="movieSearch clearBar"></button>
+              <button class="movieSearch clearBar button is-primary"></button>
             </a>
           </div>
         </div>
