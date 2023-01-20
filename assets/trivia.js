@@ -7,7 +7,7 @@ var i = 0;
 var progressBar = $('<progress>', { //Progress bar will fill until time is up
     class: "progress is-danger",
     value: i,
-    max: "3",
+    max: "13",
 });
 var progress = $('.progressBar');
 progress.append(progressBar);
@@ -57,7 +57,7 @@ if (player1Score === null || player2Score === null || tieScore === null) {
 
 // Fetches the API information
 function getTriviaApi() {
-    var seconds = 5 // Set the time of the question at the end show answer
+    var seconds = 15 // Set the time of the question at the end show answer
     const triviaApi = 'fGnBcoftMFEO2Pl6TyhSpQ==0X42NWP7AgaIvW3U';
     var category = 'entertainment';
 
