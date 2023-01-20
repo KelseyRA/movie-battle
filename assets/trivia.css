@@ -51,15 +51,12 @@ h1 {
 
 }
 
-
-
 .answer {
     /* set margin and height to the answer */
     margin-top: 60px;
     height: 40px;
 
 }
-
 
 .scorePoints {
     /* set position to the result */

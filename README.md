@@ -10,4 +10,16 @@ Movie Battle is a fun app that lets two people play a trivia game to decide what
 
 ## Live link
 
-[Live Link](https://kelseyra.github.io/movie-battle/)
+https://kelseyra.github.io/movie-battle/
+
+## Technologies
+
+HTML, CSS, JavaScript, jQuery, Bulma, Google Fonts, Font Awesome, TMDb API, API Ninjas-Trivia.
+
+## Contributors
+
+Franklyn Suriel, Jack Hanson, Kelsey Alderman, Patrick Vona.
+
+## License
+
+MIT
